@@ -1,0 +1,18 @@
+<div class="title">
+  <h1>Ver Cliente</h1>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="cliente != null" class="container">
+  <mat-card class="card">
+    <mat-card-content>
+      <p><strong>ID:</strong> {{ cliente.id }} </p>
+      <p><strong>Nombre:</strong> {{ cliente.nombre }} </p>
+      <p><strong>Apellidos:</strong> {{ cliente.apellidos }} </p>
+      <p><strong>Dirección:</strong> {{ cliente.direccion }} </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button routerLink="/clientes" mat-raised-button>Volver</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

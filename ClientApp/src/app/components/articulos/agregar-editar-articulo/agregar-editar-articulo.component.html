@@ -1,0 +1,49 @@
+<div class="title">
+  <h1>{{ operacion }} artículo</h1>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>
+<div class="container">
+  <mat-card class="card">
+    <mat-card-subtitle>
+      Datos del artículo
+    </mat-card-subtitle>
+    <form [formGroup]="form" (ngSubmit)="agregarEditarArticulo()">
+      <mat-grid-list cols="2" rowHeight="80px">
+        <mat-grid-tile [colspan]="2">
+          <mat-form-field appearance="outline">
+            <mat-label>Descripción</mat-label>
+            <input formControlName="descripcion" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Codigo</mat-label>
+            <input formControlName="codigo" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Precio</mat-label>
+            <input type="number" formControlName="precio" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+        <!--<mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Imagen</mat-label>
+            <input  formControlName="imagen" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>-->
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Stock</mat-label>
+            <input type="number" formControlName="stock" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2">
+          <button [disabled]="form.invalid" type="submit" class="btnAceptar" mat-raised-button color="primary">Aceptar</button>
+          <button mat-raised-button routerLink="/articulos">Volver</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </mat-card>
+</div>

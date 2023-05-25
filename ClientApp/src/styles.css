@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.title {
+  padding: 30px;
+  background-color: #666;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  margin: 0 15%
+}
+
+table {
+  width: 100%;
+}
+
+td,
+th {
+  width: 15%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.delete {
+  cursor: pointer;
+  color: #E15639
+}
+
+.edit {
+  cursor: pointer;
+  color: #1878B0
+}
+
+.search {
+  cursor: pointer;
+}
+
+.agregar {
+  font-size: 10px;
+  line-height: 28px;
+}
+.card {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.homeIcon {
+    color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: fixed;
+}
+
+.botonMenu {
+  text-align: center;
+  width: 50%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

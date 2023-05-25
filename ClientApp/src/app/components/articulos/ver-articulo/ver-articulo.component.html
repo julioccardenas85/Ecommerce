@@ -1,0 +1,20 @@
+<div class="title">
+  <h1>Ver Artículo</h1>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="articulo != null" class="container">
+  <mat-card class="card">
+    <mat-card-title>{{ articulo.descripcion }}</mat-card-title>
+    <mat-card-content>
+      <p><strong>ID:</strong> {{ articulo.id }} </p>
+      <p><strong>Código:</strong> {{ articulo.codigo }} </p>
+      <p><strong>Precio:</strong> $ {{ articulo.precio }} </p>
+      <p><strong>Imagen:</strong> {{ articulo.imagen }} </p>
+      <p><strong>Stock:</strong> {{ articulo.stock }} </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button routerLink="/articulos" mat-raised-button>Volver</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
